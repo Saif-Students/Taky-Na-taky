@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taky Na Taky Website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(146, 78, 160);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        input{
+            width: 50vw;
+            padding: 20px;
+            border: none;
+            outline: none;
+            font-size: 2rem;
+        }
+        button{
+            border: none;
+            outline: none;
+            background-color: blue;
+            color: white;
+            font-size: 2rem;
+            padding: 20px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(129, 129, 249);
+        }
+        p{
+            margin-top: 4vw;
+            font-size: 96px;
+            height: 120px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <input type="number" name="" id="">
+            <button>Find</button>
+        </div>
+        <p></p>
+    </div>
+    <script>
+        let myInput = document.querySelector("input")
+        let myButton = document.querySelector("button")
+        let myParagraph = document.querySelector("p")
+
+        myButton.addEventListener('click',()=>{
+           let number = Number(myInput.value)
+           if(number === 0){
+            myParagraph.innerHTML = "Zero di"
+            myInput.value = ""
+           }
+           else if(number % 2 === 0){
+            myParagraph.innerHTML = "Taky"
+            myInput.value = ""
+            
+           }
+           else{
+            myParagraph.innerHTML = "Na Taky"
+            myInput.value = ""
+           }
+        })
+
+
+
+    </script>
+</body>
+</html>
